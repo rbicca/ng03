@@ -10,8 +10,8 @@ export class HomeComponent {
 
   constructor(private router: Router){}
 
-  onClick(){
-    this.router.navigate(['/servers']);
+  onClick(id: number){
+    this.router.navigate(['/servers',id,'edit'], { queryParams: { allowEdit : '1' }, fragment: 'loading' });
   }
 
 }
